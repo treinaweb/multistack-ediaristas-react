@@ -1,0 +1,36 @@
+{
+    "name": "ediaristas",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "storybook": "start-storybook -p 6006 -s ./public",
+        "build-storybook": "build-storybook"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.4.0",
+        "@emotion/styled": "^11.3.0",
+        "@material-ui/core": "^5.0.0-beta.0",
+        "@material-ui/styles": "^5.0.0-beta.0",
+        "next": "11.0.1",
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.14.6",
+        "@storybook/addon-actions": "^6.3.4",
+        "@storybook/addon-essentials": "^6.3.4",
+        "@storybook/addon-links": "^6.3.4",
+        "@storybook/addons": "^6.3.4",
+        "@storybook/react": "^6.3.4",
+        "@storybook/theming": "^6.3.4",
+        "@types/react": "17.0.14",
+        "babel-loader": "^8.2.2",
+        "eslint": "7.30.0",
+        "eslint-config-next": "11.0.1",
+        "typescript": "4.3.5"
+    }
+}
