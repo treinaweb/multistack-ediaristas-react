@@ -10,7 +10,8 @@
         "storybook": "start-storybook -p 6006 -s ./public",
         "build-storybook": "build-storybook",
         "test": "jest --watch",
-        "plop": "plop"
+        "plop": "plop",
+        "cypress:open": "cypress open"
     },
     "dependencies": {
         "@emotion/react": "^11.4.0",
@@ -37,6 +38,7 @@
         "@types/react": "17.0.14",
         "babel-jest": "^27.0.6",
         "babel-loader": "^8.2.2",
+        "cypress": "^8.0.0",
         "eslint": "7.30.0",
         "eslint-config-next": "11.0.1",
         "jest": "^27.0.6",
