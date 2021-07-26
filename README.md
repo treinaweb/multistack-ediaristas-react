@@ -4,6 +4,7 @@
 
 #### Lista de branches
 
-|                                                                                     | Branch | Descrição            |
-| ----------------------------------------------------------------------------------- | ------ | -------------------- |
-| [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/01.zip) | 01     | Criação da Home Page |
+|                                                                                     | Branch | Descrição                   |
+| ----------------------------------------------------------------------------------- | ------ | --------------------------- |
+| [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/01.zip) | 01     | Criação da Home Page        |
+| [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/02.zip) | 02     | Busca de Diaristas pelo CEP |
