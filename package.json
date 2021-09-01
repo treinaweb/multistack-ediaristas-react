@@ -24,7 +24,7 @@
         "axios": "^0.21.1",
         "check-password-strength": "^2.0.3",
         "immer": "^8.0.1",
-        "next": "11.0.1",
+        "next": "11.1.0",
         "pagarme": "^4.19.2",
         "react": "17.0.2",
         "react-dom": "17.0.2",
