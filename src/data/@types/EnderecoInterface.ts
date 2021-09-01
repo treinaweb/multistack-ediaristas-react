@@ -1,5 +1,3 @@
-import { number, string } from 'yup/lib/locale';
-
 export interface EnderecoInterface {
     id?: number;
     logradouro?: string;
