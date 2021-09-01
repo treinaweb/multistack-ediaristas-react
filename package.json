@@ -19,11 +19,14 @@
         "@material-ui/core": "^5.0.0-beta.0",
         "@material-ui/styles": "^5.0.0-beta.0",
         "@types/react-input-mask": "^3.0.1",
+        "@types/uuid": "^8.3.1",
         "axios": "^0.21.1",
+        "check-password-strength": "^2.0.3",
         "next": "11.0.1",
         "react": "17.0.2",
         "react-dom": "17.0.2",
-        "react-input-mask": "^2.0.4"
+        "react-input-mask": "^2.0.4",
+        "uuid": "^3.4.0"
     },
     "devDependencies": {
         "@babel/core": "^7.14.6",
@@ -41,8 +44,11 @@
         "cypress": "^8.0.0",
         "eslint": "7.30.0",
         "eslint-config-next": "11.0.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^3.4.0",
         "jest": "^27.0.6",
         "plop": "^2.7.4",
+        "prettier": "^2.2.1",
         "typescript": "4.3.5"
     }
 }
