@@ -8,6 +8,7 @@ export const ItemCounterContainer = styled('div')`
     grid-template-columns: repeat(3, auto);
     gap: ${({ theme }) => theme.spacing(3)};
     align-items: center;
+    justify-content: space-between;
 
     span {
         position: relative;

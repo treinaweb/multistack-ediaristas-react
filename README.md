@@ -10,3 +10,4 @@
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/02.zip) | 02     | Busca de Diaristas pelo CEP |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/03.zip) | 03     | Configurando Ferramentas e Criando Componentes |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/04.zip) | 04     | Criação de Formulários com React Hook Form e Validações com Yup |
+| [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/05.zip) | 05     | Criação de telas de contratação de serviços |

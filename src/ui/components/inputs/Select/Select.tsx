@@ -28,7 +28,7 @@ const Select: React.FC<SelectProps> = ({
     return (
         <FormControl variant={'outlined'} style={style}>
             <InputLabel id={elementId}>{label}</InputLabel>
-            <SelectStyled labelId={elementId} label={label}>
+            <SelectStyled labelId={elementId} label={label} {...props}>
                 {children}
             </SelectStyled>
         </FormControl>
