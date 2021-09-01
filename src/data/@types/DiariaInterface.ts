@@ -1,5 +1,10 @@
+import { ApiLinksInterface } from './ApiLinksInterface';
+import { UserInterface } from './UserInterface';
+
 export interface DiariaInterface {
     id?: number;
+    cliente?: UserInterface;
+    links?: ApiLinksInterface[];
     data_atendimento: string | Date;
     hora_inicio?: string;
     hora_termino?: string;

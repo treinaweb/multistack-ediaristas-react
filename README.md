@@ -12,3 +12,4 @@
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/04.zip) | 04     | Criação de Formulários com React Hook Form e Validações com Yup |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/05.zip) | 05     | Criação de telas de contratação de serviços |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/06.zip) | 06     | React Context, APIs e Serviços |
+| [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/07.zip) | 07     | Integração com Back-End, Autenticação e Roteamento |

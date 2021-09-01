@@ -11,5 +11,6 @@
         // ]
         //"quotes": ["error", "single"]
         //"semi": ["error", "aways"]
+        // "react-hooks/exhaustive-deps": "off"
     }
 }
