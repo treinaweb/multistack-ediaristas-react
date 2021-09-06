@@ -1,3 +1,5 @@
+import { EnderecoInterface } from 'data/@types/EnderecoInterface';
+
 const CurrencyFormatter = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
@@ -31,5 +33,25 @@ export const TextFormatService = {
             price = 0;
         }
         return CurrencyFormatter.format(price);
+    },
+    getAddress(endereco: EnderecoInterface): string {
+        let enderecoFormatado = '';
+        enderecoFormatado += endereco.logradouro
+            ? `${endereco.logradouro}, `
+            : '';
+        enderecoFormatado += endereco.numero ? `${endereco.numero} - ` : '';
+        enderecoFormatado += endereco.bairro ? `${endereco.bairro}, ` : '';
+        enderecoFormatado += endereco.cidade ? `${endereco.cidade} - ` : '';
+        enderecoFormatado += endereco.estado ? `${endereco.estado}` : '';
+
+        return enderecoFormatado;
+    },
+    formatPhoneNumber(phoneNumber: string): string {
+        const match = phoneNumber.match(/^(\d{2})(\d{5})(\d{4})/);
+        if (match) {
+            const [_, ddd, n1, n2] = match;
+            return `(${ddd}) ${n1}-${n2}`;
+        }
+        return phoneNumber;
     },
 };

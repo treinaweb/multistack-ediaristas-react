@@ -13,3 +13,4 @@
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/05.zip) | 05     | Criação de telas de contratação de serviços |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/06.zip) | 06     | React Context, APIs e Serviços |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/07.zip) | 07     | Integração com Back-End, Autenticação e Roteamento |
+| [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/08.zip) | 08     | Lista de Diárias do Cliente e Detalhes da Diária |

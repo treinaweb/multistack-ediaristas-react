@@ -1,3 +1,5 @@
+import { date } from 'yup/lib/locale';
+
 export const DateService = {
     addHours(startTime: string, hours: number): string {
         let [hour, minute] = startTime.split(':').map(Number);
@@ -17,6 +19,12 @@ export const DateService = {
         const date = new Date();
         date.setFullYear(date.getFullYear() - 100);
         return date;
+    },
+    getTimeFromDate(date: string): string {
+        const [_day, time] = date.split('T'),
+            [hours, minutes, ..._rest] = time.split(':');
+
+        return `${hours}:${minutes}`;
     },
     transformDate(value: any, originalValue: any): any {
         if (typeof originalValue === 'string') {
