@@ -1,10 +1,16 @@
 import { DiariaInterface } from './DiariaInterface';
-import { EnderecoInterface } from './EnderecoInterface';
+import { CidadeInterface, EnderecoInterface } from './EnderecoInterface';
 import { UserInterface } from './UserInterface';
 
 export interface NovaDiariaFormDataInterface {
     endereco: EnderecoInterface;
     faxina: DiariaInterface;
+}
+
+export interface CadastroDiaristaFormDataInterface {
+    usuario: UserInterface;
+    endereco: EnderecoInterface;
+    enderecosAtendidos: CidadeInterface[];
 }
 
 export interface LoginFormDataInterface {
