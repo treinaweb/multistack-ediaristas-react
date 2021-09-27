@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-import { Select } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Select } from '@mui/material';
 // import { SelectProps } from './Select';
 
 export const SelectStyled = styled(Select)`

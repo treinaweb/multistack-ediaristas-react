@@ -7,7 +7,7 @@ import {
     Divider,
     Snackbar,
     Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 import PageTitle from 'ui/components/data-display/PageTitle/PageTitle';
 import DataList from 'ui/components/data-display/DataList/DataList';
 import Table, {
@@ -16,7 +16,7 @@ import Table, {
     TableRow,
 } from 'ui/components/data-display/Table/Table';
 import Dialog from 'ui/components/feedback/Dialog/Dialog';
-import { Box } from '@material-ui/system';
+import { Box } from '@mui/material';
 import JobInformation from 'ui/components/data-display/JobInformation/JobInformation';
 import UserInformation from 'ui/components/data-display/UserInformation/UserInformation';
 import { TextFormatService } from 'data/services/TextFormatService';

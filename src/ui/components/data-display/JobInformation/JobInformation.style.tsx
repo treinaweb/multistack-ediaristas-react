@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-// import {  } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+// import {  } from '@mui/material';
 // import { JobInformationProps } from './JobInformation';
 
 export const JobInformationContainer = styled('div')`

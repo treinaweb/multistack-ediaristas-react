@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-import { Avatar } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Avatar } from '@mui/material';
 import { UserProfileAvatarProps } from './UserProfileAvatar';
 
 export const UserAvatar = styled(Avatar)`

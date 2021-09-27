@@ -6,7 +6,7 @@ import {
     MenuList,
     MenuItem,
     Divider,
-} from '@material-ui/core';
+} from '@mui/material';
 import useIsMobile from 'data/hooks/useIsMobile';
 import RoundedButton from 'ui/components/inputs/RoudedButton/RoundedButton';
 import Link from 'ui/components/navigation/Link/Link';

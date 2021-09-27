@@ -5,7 +5,7 @@ import {
     Container,
     Paper,
     Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 import useContratacao from 'data/hooks/pages/useContratacao.page';
 import useIsMobile from 'data/hooks/useIsMobile';
 import React from 'react';

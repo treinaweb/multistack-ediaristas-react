@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import '@styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { CircularProgress, Container, ThemeProvider } from '@material-ui/core';
+import { CircularProgress, Container, ThemeProvider } from '@mui/material';
 import theme from 'ui/themes/theme';
 import Header from 'ui/components/surfaces/Header/Header';
 import Footer from 'ui/components/surfaces/Footer/Footer';

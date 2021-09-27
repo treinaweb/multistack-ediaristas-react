@@ -1,5 +1,5 @@
 import React from 'react';
-import { ListItem, ListItemAvatar, Container } from '@material-ui/core';
+import { ListItem, ListItemAvatar, Container } from '@mui/material';
 import {
     GradientBackground,
     SectionTitle,

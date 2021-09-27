@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { MenuItem } from '@material-ui/core';
+import { MenuItem } from '@mui/material';
 
 import Select from './Select';
 

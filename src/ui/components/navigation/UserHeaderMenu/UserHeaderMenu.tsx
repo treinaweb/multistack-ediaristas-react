@@ -1,9 +1,9 @@
-import { Divider } from '@material-ui/core';
+import { Divider } from '@mui/material';
 import { UserInterface } from 'data/@types/UserInterface';
 import React, { useRef } from 'react';
 import UserProfileAvatar from 'ui/components/data-display/UserProfileAvatar/UserProfileAvatar';
 import Link from '../Link/Link';
-// import { } from '@material-ui/core';
+// import { } from '@mui/material';
 import { UserHeaderMenuContainer, UserMenu } from './UserHeaderMenu.style';
 
 export interface UserHeaderMenuProps {

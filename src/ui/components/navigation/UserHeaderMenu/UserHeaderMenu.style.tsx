@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-import { Menu } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Menu } from '@mui/material';
 // import { UserHeaderMenuProps } from './UserHeaderMenu';
 
 export const UserHeaderMenuContainer = styled('div')`

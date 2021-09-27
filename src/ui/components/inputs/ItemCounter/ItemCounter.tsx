@@ -1,5 +1,5 @@
 import React from 'react';
-// import { } from '@material-ui/core';
+// import { } from '@mui/material';
 import { ItemCounterContainer, CircleButton } from './ItemCounter.style';
 
 export interface ItemCounterProps {

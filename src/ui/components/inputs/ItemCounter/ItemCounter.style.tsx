@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-import { IconButton } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { IconButton } from '@mui/material';
 // import { ItemCounterProps } from './ItemCounter';
 
 export const ItemCounterContainer = styled('div')`

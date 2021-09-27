@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-    Button,
-    Container,
-    Typography,
-    CircularProgress,
-} from '@material-ui/core';
+import { Button, Container, Typography, CircularProgress } from '@mui/material';
 import PageTitle from 'ui/components/data-display/PageTitle/PageTitle';
 import SafeEnvironment from 'ui/components/feedback/SafeEnvironment/SafeEnvironment';
 

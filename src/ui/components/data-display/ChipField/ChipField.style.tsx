@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-import { Chip } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Chip } from '@mui/material';
 // import { ChipFieldProps } from './ChipField';
 
 export const ChipsContainer = styled('ul')`

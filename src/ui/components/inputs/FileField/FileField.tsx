@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useState } from 'react';
-import { TextFieldProps } from '@material-ui/core';
+import { TextFieldProps } from '@mui/material';
 import TextField from '../TextField/TextField';
 import { FileContainer, UploadIcon } from './FileField.style';
 

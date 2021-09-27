@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-import { TextField, TextFieldProps } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { TextField, TextFieldProps } from '@mui/material';
 // import { TextFieldProps } from './TextField';
 
 export const TextFieldStyled = styled(TextField)<TextFieldProps>`

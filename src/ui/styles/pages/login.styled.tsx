@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-import { Button, Paper } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Button, Paper } from '@mui/material';
 
 export const LoginContainer = styled(Paper)`
     display: grid;

@@ -4,7 +4,7 @@ import {
     FormControl,
     InputLabel,
     SelectProps as MuiSelectProps,
-} from '@material-ui/core';
+} from '@mui/material';
 import { SelectStyled } from './Select.style';
 
 export interface SelectProps extends MuiSelectProps {

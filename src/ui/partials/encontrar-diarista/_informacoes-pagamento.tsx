@@ -1,4 +1,4 @@
-import { Typography, Container, Button } from '@material-ui/core';
+import { Typography, Container, Button } from '@mui/material';
 import React from 'react';
 import { PaymentForm } from 'ui/components/inputs/UserForm/UserForm';
 

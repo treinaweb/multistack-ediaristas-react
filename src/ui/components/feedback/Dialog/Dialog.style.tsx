@@ -1,11 +1,11 @@
-import { styled } from '@material-ui/core/styles';
+import { styled } from '@mui/material/styles';
 import {
     Dialog as MuiDialog,
     DialogTitle as MuiDialogTitle,
     DialogContent as MuiDialogContent,
     DialogActions as MuiDialogActions,
     IconButton as MuiIconButton,
-} from '@material-ui/core';
+} from '@mui/material';
 // import { DialogProps } from './Dialog';
 
 export const DialogContainer = styled(MuiDialog)``;

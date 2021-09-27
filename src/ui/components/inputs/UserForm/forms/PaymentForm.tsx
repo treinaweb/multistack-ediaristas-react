@@ -1,6 +1,6 @@
 import { Controller, useFormContext } from 'react-hook-form';
 import { useEffect } from 'react';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
 import { PaymentData } from '../UserForm.style';
 import TextField from '../../TextField/TextField';

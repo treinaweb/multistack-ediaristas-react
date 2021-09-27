@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-import { Paper, Typography } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { Paper, Typography } from '@mui/material';
 
 export const CardsContainer = styled('div')`
     display: grid;

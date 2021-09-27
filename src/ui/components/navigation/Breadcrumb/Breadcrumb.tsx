@@ -1,5 +1,5 @@
 import React from 'react';
-// import { } from '@material-ui/core';
+// import { } from '@mui/material';
 import { BreadcrumbContainer, BreadcrumbItem } from './Breadcrumb.style';
 
 export interface BreadcrumbProps {

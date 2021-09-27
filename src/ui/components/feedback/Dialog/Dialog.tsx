@@ -1,7 +1,7 @@
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 import useIsMobile from 'data/hooks/useIsMobile';
 import React from 'react';
-// import { } from '@material-ui/core';
+// import { } from '@mui/material';
 import {
     DialogContainer,
     DialogTitle,

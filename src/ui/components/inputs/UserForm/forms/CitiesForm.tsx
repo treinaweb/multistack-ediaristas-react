@@ -1,4 +1,4 @@
-import { Autocomplete, CircularProgress, Typography } from '@material-ui/core';
+import { Autocomplete, CircularProgress, Typography } from '@mui/material';
 import { CidadeInterface } from 'data/@types/EnderecoInterface';
 import useCitiesForm from 'data/hooks/components/inputs/UserForm/forms/useCitiesForm';
 import React from 'react';

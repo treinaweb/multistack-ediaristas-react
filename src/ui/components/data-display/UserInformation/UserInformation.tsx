@@ -1,5 +1,5 @@
 import React from 'react';
-import { SystemProps } from '@material-ui/system';
+import { SystemProps } from '@mui/system';
 import {
     UserInformationContainer,
     UserName,

@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-// import {  } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+// import {  } from '@mui/material';
 // import { FileFieldProps } from './FileField';
 
 export const FileContainer = styled('div')`

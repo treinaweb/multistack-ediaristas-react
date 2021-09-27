@@ -1,5 +1,5 @@
-import { styled } from '@material-ui/core/styles';
-import { LinearProgress, Theme } from '@material-ui/core';
+import { styled } from '@mui/material/styles';
+import { LinearProgress, Theme } from '@mui/material';
 // import { PasswordStrengthProps } from './PasswordStrength';
 
 export const PasswordStrengthLabel = styled('span', {

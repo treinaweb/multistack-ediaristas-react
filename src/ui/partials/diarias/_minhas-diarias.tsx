@@ -1,4 +1,4 @@
-import { Button, Container, Typography } from '@material-ui/core';
+import { Button, Container, Typography } from '@mui/material';
 import { DiariaStatus } from 'data/@types/DiariaInterface';
 import useMinhasDiarias from 'data/hooks/pages/diarias/useMinhasDiarias.page';
 import { DiariaService } from 'data/services/DiariaService';
