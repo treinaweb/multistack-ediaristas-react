@@ -1,5 +1,4 @@
-import { CircularProgress, Container, Typography } from '@material-ui/core';
-import { Box } from '@material-ui/system';
+import { CircularProgress, Container, Typography, Box } from '@material-ui/core';
 import { DiariaStatus } from 'data/@types/DiariaInterface';
 import useDetalhesDiaria from 'data/hooks/pages/diarias/useDetalhesDiaria.page';
 import { DateService } from 'data/services/DateService';
