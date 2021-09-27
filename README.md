@@ -15,3 +15,4 @@
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/07.zip) | 07     | Integração com Back-End, Autenticação e Roteamento |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/08.zip) | 08     | Lista de Diárias do Cliente e Detalhes da Diária |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/09.zip) | 09     | Cadastro de diaristas |
+| [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/10.zip) | 10     | Lista de Oportunidades e Candidatar-se a Diárias |
