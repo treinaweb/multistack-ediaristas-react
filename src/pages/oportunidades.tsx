@@ -117,7 +117,7 @@ const Oportunidades: React.FC = () => {
                                 itemsPerPage={itemsPerPage}
                                 currentPage={currentPage}
                                 rowElement={(item, index) => (
-                                    <TableRow key={index} >
+                                    <TableRow key={index}>
                                         <TableCell>
                                             <strong>
                                                 {TextFormatService.reverseDate(
