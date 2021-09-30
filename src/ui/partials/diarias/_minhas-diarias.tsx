@@ -13,7 +13,7 @@ import Table, {
     TableRow,
 } from 'ui/components/data-display/Table/Table';
 import Link from 'ui/components/navigation/Link/Link';
-import { ConfirmDialog } from './_minhas-diarias-dialogs';
+import { ConfirmDialog, RatingDialog } from './_minhas-diarias-dialogs';
 
 // import { Component } from './_minhas-diarias.styled';
 
@@ -30,6 +30,10 @@ const MinhasDiarias: React.FC = () => {
         diariaConfirmar,
         setDiariaConfirmar,
         confirmarDiaria,
+        diariaAvaliar,
+        setDiariaAvaliar,
+        podeAvaliar,
+        avaliarDiaria,
     } = useMinhasDiarias();
 
     return (
@@ -88,6 +92,17 @@ const MinhasDiarias: React.FC = () => {
                                                     }
                                                 >
                                                     Confirmar Presença
+                                                </Button>
+                                            )}
+                                            {podeAvaliar(item) && (
+                                                <Button
+                                                    color={'success'}
+                                                    variant={'contained'}
+                                                    onClick={() =>
+                                                        setDiariaAvaliar(item)
+                                                    }
+                                                >
+                                                    Avaliar
                                                 </Button>
                                             )}
                                         </>
@@ -159,6 +174,16 @@ const MinhasDiarias: React.FC = () => {
                                                     Confirmar Presença
                                                 </Button>
                                             )}
+                                            {podeAvaliar(item) && (
+                                                <Button
+                                                    color={'success'}
+                                                    onClick={() =>
+                                                        setDiariaAvaliar(item)
+                                                    }
+                                                >
+                                                    Avaliar
+                                                </Button>
+                                            )}
                                         </TableCell>
                                     </TableRow>
                                 )}
@@ -184,6 +209,14 @@ const MinhasDiarias: React.FC = () => {
                     diaria={diariaConfirmar}
                     onConfirm={confirmarDiaria}
                     onCancel={() => setDiariaConfirmar({} as DiariaInterface)}
+                />
+            )}
+
+            {diariaAvaliar.id && (
+                <RatingDialog
+                    diaria={diariaAvaliar}
+                    onConfirm={avaliarDiaria}
+                    onCancel={() => setDiariaAvaliar({} as DiariaInterface)}
                 />
             )}
         </>
