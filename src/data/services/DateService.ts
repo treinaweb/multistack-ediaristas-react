@@ -36,4 +36,10 @@ export const DateService = {
         }
         return value;
     },
+    getDifferenceHours(datetime: Date): number {
+        const now = Date.now(),
+            futureDate = datetime.getTime();
+
+        return (futureDate - now) / 1000 / 60 / 60;
+    },
 };
