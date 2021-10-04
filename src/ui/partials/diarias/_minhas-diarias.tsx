@@ -18,6 +18,7 @@ import {
     ConfirmDialog,
     RatingDialog,
 } from './_minhas-diarias-dialogs';
+import { ButtonsContainer } from './_minhas-diarias.styled';
 
 // import { Component } from './_minhas-diarias.styled';
 
@@ -42,12 +43,43 @@ const MinhasDiarias: React.FC = () => {
         setDiariaCancelar,
         podeCancelar,
         cancelarDiaria,
+        filtro,
+        setFiltro,
+        alterarFiltro,
     } = useMinhasDiarias();
 
     return (
         <>
             <Container sx={{ mb: 5, p: 0 }}>
                 <PageTitle title={'Minhas diárias'} />
+
+                <ButtonsContainer>
+                    <Button
+                        onClick={() => alterarFiltro('pendentes')}
+                        variant={
+                            filtro === 'pendentes' ? 'contained' : 'outlined'
+                        }
+                    >
+                        Pendentes
+                    </Button>
+                    <Button
+                        onClick={() => alterarFiltro('avaliadas')}
+                        variant={
+                            filtro === 'avaliadas' ? 'contained' : 'outlined'
+                        }
+                    >
+                        Avaliadas
+                    </Button>
+                    <Button
+                        onClick={() => alterarFiltro('canceladas')}
+                        variant={
+                            filtro === 'canceladas' ? 'contained' : 'outlined'
+                        }
+                    >
+                        Canceladas
+                    </Button>
+                </ButtonsContainer>
+
                 {filteredData.length > 0 ? (
                     isMobile ? (
                         <>

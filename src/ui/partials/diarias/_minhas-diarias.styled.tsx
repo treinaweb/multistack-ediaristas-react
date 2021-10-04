@@ -1,6 +1,13 @@
 import { styled } from '@mui/material/styles';
 // import { } from '@mui/material';
 
+export const ButtonsContainer = styled('div')`
+    display: flex;
+    flex-wrap: wrap;
+    gap: ${({ theme }) => theme.spacing(2)};
+    margin-bottom: ${({ theme }) => theme.spacing(4)};
+`;
+
 export const RatingBox = styled('div')`
     display: grid;
     grid-template-columns: 100px 1fr;

@@ -19,3 +19,4 @@
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/11.zip) | 11     | Confirmação de Diárias |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/12.zip) | 12     | Avaliação de Diárias |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/13.zip) | 13     | Cancelar Diárias |
+| [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/14.zip) | 14     | Filtro de Diárias |
