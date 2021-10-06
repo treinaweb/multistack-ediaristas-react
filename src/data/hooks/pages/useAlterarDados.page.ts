@@ -18,6 +18,7 @@ export default function useAlterarDados() {
             resolver: getResolver(),
         }),
         [picture, setPicture] = useState(''),
+        [pictureFile, setPictureFile] = useState<File>(),
         [snackMessage, setSnackMessage] = useState('');
 
     useEffect(() => {
@@ -41,6 +42,7 @@ export default function useAlterarDados() {
         if (files !== null && files.length) {
             const file = files[0];
             setPicture(URL.createObjectURL(file));
+            setPictureFile(file);
         }
     }
 
@@ -123,12 +125,10 @@ export default function useAlterarDados() {
             user.links,
             'alterar_foto_usuario',
             async (request) => {
-                const fileList = formMethods.getValues('usuario.foto_usuario');
-                if (fileList && fileList.length) {
-                    const fotoUsuario = fileList[0];
+                if (pictureFile) {
                     try {
                         const userData = ObjectService.jsonToFormData({
-                            foto_usuario: fotoUsuario,
+                            foto_usuario: pictureFile,
                         });
                         await request<UserInterface>({
                             data: userData,
@@ -170,7 +170,7 @@ export default function useAlterarDados() {
         ApiServiceHateoas(user.links, 'relacionar_cidades', async (request) => {
             try {
                 await request<EnderecoInterface>({
-                    data: data.enderecosAtendidos,
+                    data: { cidades: data.enderecosAtendidos },
                 });
 
                 userDispatch({
