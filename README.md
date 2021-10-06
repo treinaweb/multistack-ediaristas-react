@@ -21,3 +21,4 @@
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/13.zip) | 13     | Cancelar Diárias |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/14.zip) | 14     | Filtro de Diárias |
 | [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/15.zip) | 15     | Lista de Pagamentos de Diaristas |
+| [Download](https://github.com/treinaweb/multistack-ediaristas-react/archive/16.zip) | 16     | Alteração de dados cadastrais |

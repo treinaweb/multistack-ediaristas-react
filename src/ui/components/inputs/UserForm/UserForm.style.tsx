@@ -72,6 +72,25 @@ export const NewContactData = styled(BaseGrid)`
     }
 `;
 
+export const ContactData = styled(BaseGrid)`
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        'email email'
+        'senha-antiga senha-antiga'
+        'nova-senha confirmar-senha'
+        'password-strength _';
+
+    ${({ theme }) => theme.breakpoints.down('md')} {
+        grid-template-areas:
+            'email'
+            'senha-antiga'
+            'senha-antiga'
+            'nova-senha'
+            'password-strength'
+            'confirmar-senha';
+    }
+`;
+
 export const PaymentData = styled(BaseGrid)`
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:

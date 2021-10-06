@@ -1,10 +1,12 @@
 import { CidadeInterface } from 'data/@types/EnderecoInterface';
+import { UserContext } from 'data/contexts/UserContext';
 import useCities from 'data/hooks/useCities.hook';
-import { useEffect, useMemo } from 'react';
+import { useContext, useEffect, useMemo } from 'react';
 import { useFormContext } from 'react-hook-form';
 
 export default function useCitiesForm(estado: string) {
-    const { register, setValue, watch } = useFormContext(),
+    const { addressList } = useContext(UserContext).userState,
+        { register, setValue, watch } = useFormContext(),
         listaCidades = useCities(estado),
         enderecosAtendidos = watch('enderecosAtendidos', []),
         citiesName = useMemo(
@@ -23,6 +25,10 @@ export default function useCitiesForm(estado: string) {
     useEffect(() => {
         register('enderecosAtendidos', { value: [] });
     }, []);
+
+    useEffect(() => {
+        addressList.length && setValue('enderecosAtendidos', addressList);
+    }, [addressList]);
 
     function handleNewCity(newValue: string | null) {
         if (newValue) {
