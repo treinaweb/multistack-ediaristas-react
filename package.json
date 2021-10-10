@@ -24,7 +24,7 @@
         "@types/uuid": "^8.3.1",
         "axios": "^0.21.1",
         "check-password-strength": "^2.0.3",
-        "immer": "^8.0.1",
+        "immer": "^9.0.6",
         "next": "11.0.1",
         "pagarme": "^4.19.2",
         "react": "17.0.2",
