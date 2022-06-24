@@ -4,6 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { FormSchemaService } from 'data/services/FormSchemaService';
 import {
     CadastroClienteFormDataInterface,
+    CredenciaisInterface,
     LoginFormDataInterface,
     NovaDiariaFormDataInterface,
     PagamentoFormDataInterface,
@@ -50,7 +51,7 @@ export default function useContratacao() {
         paymentForm = useForm<PagamentoFormDataInterface>({
             resolver: yupResolver(FormSchemaService.payment()),
         }),
-        loginForm = useForm<LoginFormDataInterface>({
+        loginForm = useForm<LoginFormDataInterface<CredenciaisInterface>>({
             resolver: yupResolver(FormSchemaService.login()),
         }),
         { userState, userDispatch } = useContext(UserContext),
@@ -185,7 +186,7 @@ export default function useContratacao() {
         }
     }
 
-    async function onLoginFormSubmit(data: { login: LoginFormDataInterface }) {
+    async function onLoginFormSubmit(data: LoginFormDataInterface<CredenciaisInterface>) {
         const loginSuccess = await login(data.login);
         if (loginSuccess) {
             const user = await LoginService.getUser();
@@ -197,7 +198,7 @@ export default function useContratacao() {
     }
 
     async function login(
-        credentials: LoginFormDataInterface,
+        credentials: CredenciaisInterface,
         user?: UserInterface
     ): Promise<boolean> {
         const loginSuccess = await LoginService.login(credentials);
@@ -212,9 +213,7 @@ export default function useContratacao() {
         return loginSuccess;
     }
 
-    async function onPaymentFormSubmit(data: {
-        pagamento: PagamentoFormDataInterface;
-    }) {
+    async function onPaymentFormSubmit(data: PagamentoFormDataInterface) {
         const cartao = {
             card_number: data.pagamento.numero_cartao.replaceAll(' ', ''),
             card_holder_name: data.pagamento.nome_cartao,

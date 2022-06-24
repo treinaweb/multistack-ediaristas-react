@@ -6,6 +6,7 @@ import {
     LinkProps as MuiLinkProps,
     ButtonProps,
 } from '@mui/material';
+import { ReactNode } from 'react';
 
 export interface LinkProps {
     href: string;
@@ -13,6 +14,7 @@ export interface LinkProps {
     next?: NextLinkProps;
     Component?: React.ElementType;
     onClick?: () => void;
+    children: ReactNode;
 }
 
 const Link: React.FC<LinkProps> = ({

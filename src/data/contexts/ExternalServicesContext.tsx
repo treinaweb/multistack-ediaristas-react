@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, PropsWithChildren, ReactNode } from 'react';
 import {
     ExternalServiceReducerInterface,
     initialState,
@@ -12,7 +12,9 @@ const initialValue: ExternalServiceReducerInterface = {
 
 export const ExternalServicesContext = createContext(initialValue);
 
-export const ExternalServicesProvider: React.FC = ({ children }) => {
+export const ExternalServicesProvider: React.FC<PropsWithChildren> = ({
+    children,
+}) => {
     const reducer = useExternalServicesReducer();
 
     return (

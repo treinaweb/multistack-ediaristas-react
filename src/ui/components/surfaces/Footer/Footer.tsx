@@ -10,6 +10,7 @@ import {
 } from './Footer.style';
 import { List, Box, Typography } from '@mui/material';
 import Link from 'ui/components/navigation/Link/Link';
+import { PropsWithChildren } from 'react';
 
 const Footer = () => {
     return (

@@ -13,7 +13,11 @@ export interface CadastroDiaristaFormDataInterface {
     enderecosAtendidos: CidadeInterface[];
 }
 
-export interface LoginFormDataInterface {
+export interface LoginFormDataInterface<T> {
+    login: T;
+}
+
+export interface CredenciaisInterface {
     email: string;
     password: string;
 }
@@ -23,9 +27,12 @@ export interface CadastroClienteFormDataInterface {
 }
 
 export interface PagamentoFormDataInterface {
-    nome_cartao: string;
-    numero_cartao: string;
-    codigo: string;
-    validade: string;
+    pagamento: {
+        nome_cartao: string;
+        numero_cartao: string;
+        codigo: string;
+        validade: string;
+        pagamento_recusado?: boolean;
+    };
     pagamento_recusado?: boolean;
 }

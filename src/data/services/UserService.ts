@@ -11,7 +11,7 @@ export const UserService = {
         userType: UserType,
         link: ApiLinksInterface
     ): Promise<UserInterface | undefined> {
-        ApiService.defaults.headers.Authorization = null;
+        ApiService.defaults.headers.common.Authorization = '';
 
         const nascimento = TextFormatService.dateToString(
                 user.nascimento as Date

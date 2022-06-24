@@ -8,6 +8,7 @@ import {
     IconButton,
     Container,
 } from '@mui/material';
+import { PropsWithChildren } from 'react';
 
 export const FooterContainer = styled('footer')`
     background-color: ${({ theme }) => theme.palette.primary.main};
@@ -16,7 +17,7 @@ export const FooterContainer = styled('footer')`
     margin-top: auto;
 `;
 
-export const FooterTitle = styled((props) => (
+export const FooterTitle = styled((props: PropsWithChildren) => (
     <Typography variant={'body2'} component={'h2'} {...props} />
 ))`
     font-weight: bold;
@@ -28,7 +29,7 @@ export const FooterSocialList = styled(List)`
     grid-gap: ${({ theme }) => theme.spacing(1.5)};
 `;
 
-export const FooterListItem = styled((props) => (
+export const FooterListItem = styled((props: PropsWithChildren) => (
     <ListItem disableGutters {...props} />
 ))``;
 
@@ -59,7 +60,7 @@ export const AppList = styled('ul')`
     }
 `;
 
-export const SocialButton = styled((props: LinkProps) => (
+export const SocialButton = styled((props: LinkProps<any>) => (
     <Link
         component={IconButton}
         target={'_blank'}

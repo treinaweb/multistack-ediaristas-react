@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 // import { } from '@mui/material';
 import {
     JobInformationContainer,
@@ -8,7 +8,7 @@ import {
 
 export interface JobInformationProps {}
 
-const JobInformation: React.FC<JobInformationProps> = ({ children }) => {
+const JobInformation: React.FC<PropsWithChildren<JobInformationProps>> = ({ children }) => {
     return (
         <JobInformationContainer>
             <JobInformationIcon className={'twf-check-circle'} />

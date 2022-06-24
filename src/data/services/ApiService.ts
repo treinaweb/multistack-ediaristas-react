@@ -12,8 +12,12 @@ export const ApiService = axios.create({
 });
 
 ApiService.interceptors.response.use(
-    (response) => response,
+    (response) => {
+  
+        return response;
+    },
     (error) => {
+        console.log(`ERRO  `, error.response);
         if (
             error.response.status === 401 &&
             error.response.data.code === 'token_not_valid'
@@ -36,11 +40,13 @@ async function handleTokenRefresh(error: { config: AxiosRequestConfig }) {
 
             LocalStorage.set('token', data.access);
             LocalStorage.set('token_refresh', data.refresh);
+            ApiService.defaults.headers.common.Authorization = 'Bearer ' + data.access;
 
-            ApiService.defaults.headers.Authorization = 'Bearer ' + data.access;
+            // error.config.headers.Authorization =
+            //     ApiService.defaults.headers.Authorization;
+            error.config.headers!['Authorization'] = ApiService.defaults.headers.common['Authorization'];
 
-            error.config.headers.Authorization =
-                ApiService.defaults.headers.Authorization;
+            console.log('handleTokenRefresh');
 
             return ApiService(error.config);
         } catch (err) {
@@ -67,6 +73,7 @@ export function ApiServiceHateoas(
     onCantRequest?: Function
 ) {
     const requestLink = linksResolver(links, name);
+    console.log(`ApiServiceHateoas `, requestLink);
     if (requestLink) {
         onCanRequest(<T>(data?: AxiosRequestConfig) => {
             return ApiService.request<T>({

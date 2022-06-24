@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, PropsWithChildren } from 'react';
 import {
     UserReducerInterface,
     initialState,
@@ -12,7 +12,7 @@ const initialValue: UserReducerInterface = {
 
 export const UserContext = createContext(initialValue);
 
-export const UserProvider: React.FC = ({ children }) => {
+export const UserProvider: React.FC<PropsWithChildren> = ({ children }) => {
     const reducer = useUserReducer();
 
     return (

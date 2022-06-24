@@ -155,6 +155,7 @@ const Contratacao: React.FC = () => {
                                     onSubmit={loginForm.handleSubmit(
                                         onLoginFormSubmit
                                     )}
+                                
                                 >
                                     {loginError && (
                                         <Typography
