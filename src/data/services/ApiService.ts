@@ -13,11 +13,9 @@ export const ApiService = axios.create({
 
 ApiService.interceptors.response.use(
     (response) => {
-  
         return response;
     },
     (error) => {
-        console.log(`ERRO  `, error.response);
         if (
             error.response.status === 401 &&
             error.response.data.code === 'token_not_valid'
@@ -40,11 +38,13 @@ async function handleTokenRefresh(error: { config: AxiosRequestConfig }) {
 
             LocalStorage.set('token', data.access);
             LocalStorage.set('token_refresh', data.refresh);
-            ApiService.defaults.headers.common.Authorization = 'Bearer ' + data.access;
+            ApiService.defaults.headers.common.Authorization =
+                'Bearer ' + data.access;
 
             // error.config.headers.Authorization =
             //     ApiService.defaults.headers.Authorization;
-            error.config.headers!['Authorization'] = ApiService.defaults.headers.common['Authorization'];
+            error.config.headers!['Authorization'] =
+                ApiService.defaults.headers.common['Authorization'];
 
             console.log('handleTokenRefresh');
 
