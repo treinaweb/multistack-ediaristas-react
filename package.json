@@ -20,7 +20,6 @@
         "@emotion/styled": "^11.3.0",
         "@hookform/resolvers": "^2.9.2",
         "@mui/material": "^5.0.1",
-        "@mui/system": "^5.0.1",
         "@types/react-input-mask": "^3.0.1",
         "@types/uuid": "^8.3.1",
         "axios": "^0.27.2",
