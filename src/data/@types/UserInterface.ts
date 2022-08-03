@@ -34,3 +34,8 @@ export enum UserType {
     Cliente = 1,
     Diarista = 2,
 }
+
+export interface BuscaCepResponse {
+    diaristas: UserShortInformationInterface[];
+    quantidade_diaristas: number;
+}

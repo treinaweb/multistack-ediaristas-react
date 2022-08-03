@@ -18,7 +18,8 @@ const Select: React.FC<SelectProps> = ({
     ...props
 }) => {
     const [elementId, setElementId] = useState('');
-
+    // "uuid": "^8.3.2"
+    //    "@types/uuid": "^8.3.4",
     useEffect(() => {
         if (window !== undefined) {
             setElementId(uuid());

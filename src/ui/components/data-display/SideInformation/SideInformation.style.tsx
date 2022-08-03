@@ -46,16 +46,6 @@ export const InformationListItem = styled('li')`
     gap: ${({ theme }) => theme.spacing(3)};
     align-items: center;
 
-    &:not(:last-of-type)::after {
-        content: '';
-        position: absolute;
-        background-color: ${({ theme }) => theme.palette.grey[200]};
-        height: 1px;
-        left: ${({ theme }) => theme.spacing(3)};
-        right: ${({ theme }) => theme.spacing(3)};
-        bottom: 0;
-    }
-
     h4 {
         margin-bottom: ${({ theme }) => theme.spacing()};
     }
@@ -71,5 +61,15 @@ export const InformationListItem = styled('li')`
                 margin-bottom: 0;
             }
         }
+    }
+
+    &:not(:last-of-type)::after {
+        content: '';
+        position: absolute;
+        background-color: ${({ theme }) => theme.palette.grey[200]};
+        height: 1px;
+        left: ${({ theme }) => theme.spacing(3)};
+        right: ${({ theme }) => theme.spacing(3)};
+        bottom: 0;
     }
 `;

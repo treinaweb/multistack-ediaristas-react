@@ -21,7 +21,7 @@ export const BreadcrumbContainer = styled('ul')`
     }
     ${({ theme }) => theme.breakpoints.up('md')} {
         gap: ${({ theme }) => theme.spacing(2)};
-        margin: ${({ theme }) => theme.spacing(2) + ' ' + theme.spacing()};
+        margin: ${({ theme }) => theme.spacing(2, 0)};
     }
 `;
 
@@ -30,7 +30,7 @@ export const BreadcrumbItem = styled('li', {
 })<{ isSelected?: boolean }>`
     ${({ theme }) => theme.breakpoints.down('md')} {
         flex: auto;
-        padding: ${({ theme }) => theme.spacing() + ' ' + theme.spacing(3)};
+        padding: ${({ theme }) => theme.spacing(1, 3)};
         background-color: ${({ theme, isSelected }) =>
             theme.palette.grey[isSelected ? 200 : 100]};
     }

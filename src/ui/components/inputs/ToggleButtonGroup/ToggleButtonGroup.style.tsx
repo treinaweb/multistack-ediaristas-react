@@ -16,6 +16,7 @@ export const ToggleButtonStyled = styled(ToggleButton)`
         border: 2px solid ${({ theme }) => theme.palette.grey[100]};
         background-color: ${({ theme }) => theme.palette.grey[50]};
         text-transform: none;
+        /* algum está selecionado */
         &.Mui-selected {
             background-color: ${({ theme }) => theme.palette.secondary.main};
             color: white;

@@ -5,16 +5,16 @@ import { useState, useMemo } from 'react';
 
 export default function useVerificarProfissionais() {
     const [cep, setCep] = useState(''),
-        cepValido = useMemo(() => {
-            return ValidationService.cep(cep);
-        }, [cep]),
         [erro, setErro] = useState(''),
         [buscaFeita, setBuscaFeita] = useState(false),
         [carregando, setCarregando] = useState(false),
         [diaristas, setDiaristas] = useState(
             [] as UserShortInformationInterface[]
         ),
-        [diaristasRestantes, setDiaristasRestantes] = useState(0);
+        [diaristasRestantes, setDiaristasRestantes] = useState(0),
+        cepValido = useMemo(() => {
+            return ValidationService.cep(cep);
+        }, [cep]);
 
     async function buscarProfissionais(cep: string) {
         setBuscaFeita(false);

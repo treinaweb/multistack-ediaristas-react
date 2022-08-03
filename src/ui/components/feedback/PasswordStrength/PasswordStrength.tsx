@@ -13,7 +13,7 @@ export interface PasswordStrengthProps {
 const PasswordStrength: React.FC<PasswordStrengthProps> = ({ password }) => {
     const strength = password ? passwordStrength(password).id : 0,
         strengthValue = ((strength + 1) / 4) * 100;
-
+    //  "check-password-strength": "^2.0.7",
     return (
         <div style={{ gridArea: 'password-strength' }}>
             <Typography
