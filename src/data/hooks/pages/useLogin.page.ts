@@ -11,9 +11,7 @@ import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 export default function useLogin() {
-    const formMethods = useForm<{
-            login: LoginFormDataInterface<CredenciaisInterface>;
-        }>({
+    const formMethods = useForm<LoginFormDataInterface<CredenciaisInterface>>({
             resolver: yupResolver(FormSchemaService.login()),
         }),
         [errorMessage, setErrorMessage] = useState(''),

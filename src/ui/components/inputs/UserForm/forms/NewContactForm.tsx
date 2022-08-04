@@ -1,3 +1,4 @@
+import { FormValues } from 'data/@types/form/FormValue';
 import { useFormContext } from 'react-hook-form';
 import PasswordStrength from 'ui/components/feedback/PasswordStrength/PasswordStrength';
 import TextField from '../../TextField/TextField';
@@ -8,7 +9,7 @@ export const NewContactForm = () => {
         register,
         formState: { errors },
         watch,
-    } = useFormContext();
+    } = useFormContext<FormValues>();
     const newPassword = watch('usuario.password');
 
     return (

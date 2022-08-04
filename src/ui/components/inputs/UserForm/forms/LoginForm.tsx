@@ -1,3 +1,4 @@
+import { FormValues } from 'data/@types/form/FormValue';
 import React from 'react';
 import { useFormContext } from 'react-hook-form';
 import Link from 'ui/components/navigation/Link/Link';
@@ -8,7 +9,7 @@ export const LoginForm = () => {
     const {
         register,
         formState: { errors },
-    } = useFormContext();
+    } = useFormContext<FormValues>();
 
     return (
         <LoginData>

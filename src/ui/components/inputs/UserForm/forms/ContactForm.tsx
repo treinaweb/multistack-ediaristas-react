@@ -1,3 +1,4 @@
+import { FormValues } from 'data/@types/form/FormValue';
 import { UserContext } from 'data/contexts/UserContext';
 import { useContext } from 'react';
 import { useFormContext } from 'react-hook-form';
@@ -10,7 +11,7 @@ export const ContactForm = () => {
             register,
             formState: { errors },
             watch,
-        } = useFormContext(),
+        } = useFormContext<FormValues>(),
         newPassword = watch('usuario.new_password'),
         { user } = useContext(UserContext).userState;
 
@@ -51,7 +52,7 @@ export const ContactForm = () => {
                 helperText={errors?.usuario?.password_confirmation?.message}
                 required={false}
             />
-            <PasswordStrength password={newPassword} />
+            <PasswordStrength password={newPassword ?? ''} />
         </ContactData>
     );
 };

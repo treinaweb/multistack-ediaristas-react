@@ -78,7 +78,7 @@ export default function useCadastroDiarista() {
         data: CadastroDiaristaFormDataInterface,
         newUser: UserInterface
     ) {
-        ApiService.defaults.headers.Authorization =
+        ApiService.defaults.headers.common.Authorization =
             'Bearer ' + newUser?.token?.access;
 
         LocalStorage.set('token', newUser.token?.access);

@@ -11,6 +11,7 @@ import { ItemsContainer } from './_detalhes-servico.styled';
 import ItemCounter from 'ui/components/inputs/ItemCounter/ItemCounter';
 import TextFieldMask from 'ui/components/inputs/TextFieldMask/TextFieldMask';
 import TextField from 'ui/components/inputs/TextField/TextField';
+import { FormValues } from 'data/@types/form/FormValue';
 
 interface DetalhesServicoProps {
     servicos?: ServicoInterface[];
@@ -48,7 +49,7 @@ const DetalhesServico: React.FC<DetalhesServicoProps> = ({
         register,
         control,
         formState: { errors },
-    } = useFormContext();
+    } = useFormContext<FormValues>();
 
     return (
         <>
@@ -57,7 +58,7 @@ const DetalhesServico: React.FC<DetalhesServicoProps> = ({
             </Typography>
             <Controller
                 name={'faxina.servico'}
-                defaultValue={servicos[0].id}
+                defaultValue={`${servicos[0].id}`}
                 control={control}
                 render={({ field }) => (
                     <ToggleButtonGroup
@@ -88,25 +89,36 @@ const DetalhesServico: React.FC<DetalhesServicoProps> = ({
             </Typography>
 
             <ItemsContainer>
-                {houseParts.map((item) => (
-                    <Controller
-                        key={item.name}
-                        name={'faxina.' + item.name}
-                        defaultValue={0}
-                        control={control}
-                        render={({ field }) => (
-                            <ItemCounter
-                                label={item.singular}
-                                plural={item.plural}
-                                counter={field.value}
-                                onInc={() => field.onChange(field.value + 1)}
-                                onDec={() =>
-                                    field.onChange(Math.max(0, field.value - 1))
-                                }
-                            />
-                        )}
-                    />
-                ))}
+                {houseParts.map((item) => {
+                    return (
+                        <Controller
+                            key={item.name}
+                            name={`faxina.${item.name}` as any}
+                            defaultValue={0}
+                            control={control}
+                            render={({ field }) => (
+                                <ItemCounter
+                                    label={item.singular}
+                                    plural={item.plural}
+                                    counter={field.value as number}
+                                    onInc={() =>
+                                        field.onChange(
+                                            (field.value as number) + 1
+                                        )
+                                    }
+                                    onDec={() =>
+                                        field.onChange(
+                                            Math.max(
+                                                0,
+                                                (field.value as number) - 1
+                                            )
+                                        )
+                                    }
+                                />
+                            )}
+                        />
+                    );
+                })}
             </ItemsContainer>
 
             <Divider sx={{ my: 5 }} />

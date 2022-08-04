@@ -5,6 +5,7 @@ import useAddressForm from 'data/hooks/components/inputs/UserForm/forms/useAddre
 import Select from '../../Select/Select';
 import TextField from '../../TextField/TextField';
 import TextFieldMask from '../../TextFieldMask/TextFieldMask';
+import { FormValues } from 'data/@types/form/FormValue';
 
 export const AddressForm = () => {
     const {

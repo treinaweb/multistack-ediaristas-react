@@ -1,3 +1,4 @@
+import { FormValues } from 'data/@types/form/FormValue';
 import { UserContext } from 'data/contexts/UserContext';
 import { TextFormatService } from 'data/services/TextFormatService';
 import React, { useContext } from 'react';
@@ -17,7 +18,7 @@ export const UserDataForm: React.FC<UserDataFormProps> = ({
             register,
             formState: { errors },
             control,
-        } = useFormContext(),
+        } = useFormContext<FormValues>(),
         { user } = useContext(UserContext).userState;
 
     return (

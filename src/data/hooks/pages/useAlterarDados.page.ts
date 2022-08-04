@@ -1,5 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import axios from 'axios';
+import axios, { Axios, AxiosError, AxiosResponse } from 'axios';
 import { EnderecoInterface } from 'data/@types/EnderecoInterface';
 import { CadastroDiaristaFormDataInterface } from 'data/@types/FormInterface';
 import { UserInterface, UserType } from 'data/@types/UserInterface';
@@ -109,7 +109,8 @@ export default function useAlterarDados() {
                 });
             } catch (error) {
                 if (axios.isAxiosError(error)) {
-                    if (error?.response?.data?.password) {
+                    const err = error as AxiosError<{ password?: string }>;
+                    if (err.response?.data.password) {
                         formMethods.setError('usuario.password', {
                             type: 'invalida',
                             message: 'Senha inválida',

@@ -26,6 +26,6 @@ export interface CepResponse {
     localidade: string;
     uf: string;
     cep: string;
-    ibge: string;
+    ibge: number;
     complemento: string;
 }

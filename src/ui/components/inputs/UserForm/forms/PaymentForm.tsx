@@ -5,13 +5,14 @@ import { Typography } from '@mui/material';
 import { PaymentData } from '../UserForm.style';
 import TextField from '../../TextField/TextField';
 import TextFieldMask from '../../TextFieldMask/TextFieldMask';
+import { FormValues } from 'data/@types/form/FormValue';
 
 export const PaymentForm = () => {
     const {
         register,
         formState: { errors },
         control,
-    } = useFormContext();
+    } = useFormContext<FormValues>();
 
     useEffect(() => {
         register('pagamento_recusado');
